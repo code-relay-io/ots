@@ -1,3 +1,15 @@
+# Task # 1
+
+https://github.com/khaledhosny/ots/issues/200
+
+Remember your job is to make *incremental* progress, break the task into smaller tasks, or finish something in 15 minutes, then pass it along to the next contributor. 
+No responsibility, only fun.
+
+If you don't finish, add your next task to the readme.md. When you're done make a pull request to the repo
+
+Email with questions
+
+
 [![Build Status](https://travis-ci.com/khaledhosny/ots.svg?branch=main)](https://travis-ci.com/khaledhosny/ots)
 [![Build status](https://ci.appveyor.com/api/projects/status/0l9ms6g47corescm/branch/main?svg=true)](https://ci.appveyor.com/project/khaledhosny/ots/branch/main)
 [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/ots.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:ots)
