@@ -1,7 +1,0 @@
-{
-    "C_Cpp.formatting": "vcFormat",
-    "C_Cpp.vcFormat.indent.namespaceContents": false,
-    "files.associations": {
-        "limits": "cpp"
-    }
-}
