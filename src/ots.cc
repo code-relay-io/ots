@@ -152,6 +152,13 @@ const struct {
   { OTS_TAG_VHEA, false },
   { OTS_TAG_VMTX, false },
   { OTS_TAG_MATH, false },
+  // We need to parse EBDT table in advance of parsing the 
+  // EBLC and EBSC tables because they refer to data in
+  // EBDT
+  { OTS_TAG_EBDT, false },
+  { OTS_TAG_EBLC, false },
+  { OTS_TAG_EBSC, false },
+
   // Graphite tables
 #ifdef OTS_GRAPHITE
   { OTS_TAG_GLOC, false },
@@ -721,12 +728,22 @@ bool ProcessGeneric(ots::FontFile *header,
       }
     }
   }
+  ots::Table *ebdt = font->GetTable(OTS_TAG_EBDT);
+  ots::Table *eblc = font->GetTable(OTS_TAG_EBLC);
+  if (ebdt && !eblc){
+    ebdt->Drop("Font contains ebdt table but not eblc table");
+    ots::Table *ebsc = font->GetTable(OTS_TAG_EBSC);
+    if (ebsc){
+      ebsc->Drop("Font does not contain eblc table");
+    }
+  }
+  
 
   ots::Table *glyf = font->GetTable(OTS_TAG_GLYF);
   ots::Table *loca = font->GetTable(OTS_TAG_LOCA);
   ots::Table *cff  = font->GetTable(OTS_TAG_CFF);
   ots::Table *cff2 = font->GetTable(OTS_TAG_CFF2);
-
+  //TODO add EBDT to this check
   if (glyf && loca) {
     if (font->version != 0x000010000) {
       OTS_WARNING_MSG_HDR("wrong sfntVersion for glyph data");

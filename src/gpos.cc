@@ -96,9 +96,9 @@ bool ParseValueRecord(const ots::Font *font,
   // Check existence of adjustment fields.
   for (unsigned i = 0; i < 4; ++i) {
     if ((value_format >> i) & 0x1) {
-      // Just read the field since these fileds could take an arbitrary values.
+      // Just read the field since these fields could take an arbitrary values.
       if (!subtable->Skip(2)) {
-        return OTS_FAILURE_MSG("Failed to read value reacord component");
+        return OTS_FAILURE_MSG("Failed to read value record component");
       }
     }
   }

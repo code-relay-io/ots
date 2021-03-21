@@ -1,3 +1,13 @@
+# Task # 15
+
+Still adding ebdt,eblc and ebsc
+in
+
+`./src/eblc.cc` continue work on ParseIndexSubTable
+see `https://docs.microsoft.com/en-us/typography/opentype/spec/eblc#indexsubtables`
+
+Email mike@coderelay.io if you have any questions.
+
 [![Build Status](https://travis-ci.com/khaledhosny/ots.svg?branch=main)](https://travis-ci.com/khaledhosny/ots)
 [![Build status](https://ci.appveyor.com/api/projects/status/0l9ms6g47corescm/branch/main?svg=true)](https://ci.appveyor.com/project/khaledhosny/ots/branch/main)
 [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/ots.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:ots)
