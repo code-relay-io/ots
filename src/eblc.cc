@@ -38,10 +38,15 @@ bool ParseIndexSubTable(const ots::Font* font,
   switch (index_format)
   {
   case 1:
-  
     last_glyph_index - first_glyph_index + 1 + 1
     break;
   case 2:
+    //TODO Create BigGlyphMetrics struct for case 2 and case 5
+    uint32_t image_size;
+    if (!table.ReadU32(&image_size)) {
+      return OTS_FAILURE_MSG("Failed to read IndexSubTable");
+    }
+    break;
   case 3:
   case 4:
   case 5:
