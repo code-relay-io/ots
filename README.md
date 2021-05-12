@@ -6,6 +6,8 @@ in
 `./src/eblc.cc` continue work on ParseIndexSubTable
 see `https://docs.microsoft.com/en-us/typography/opentype/spec/eblc#indexsubtables`
 
+Currently setting up BigGlyphMetrics class
+
 Email mike@coderelay.io if you have any questions.
 
 [![Build Status](https://travis-ci.com/khaledhosny/ots.svg?branch=main)](https://travis-ci.com/khaledhosny/ots)
